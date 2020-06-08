@@ -7,17 +7,17 @@ the-one-for-input-mask is a simple code to help mask input value in an given for
 var masking = require('the-one-for-input-mask');
 
 var maskCreditCard = new masking("xxxx xxxx");
-var {value, mask} = maskCreditCard("5987679500800000");
+var {value, mask} = maskCreditCard.mask("5987679500800000");
 // value | 5987679500800000
 // mask  | 5987 6795 0080 0000
 
 var maskExpiryDate = new masking("xx/xx");
-var {value, mask} = maskExpiryDate("0325");
+var {value, mask} = maskExpiryDate.mask("0325");
 // value | 0325
 // mask  | 03/25
 
 var maskDate = new masking("xx-xx-xxxx");
-var {valuue, mask} = maskDate("17081992");
+var {valuue, mask} = maskDate.mask("17081992");
 // value | 17081992
 //mask   | 17-08-1992
 
@@ -100,7 +100,7 @@ var {valuue, mask} = maskDate("17081992");
 var masking = require('the-one-for-input-mask');
 
 var maskCreditCard = new masking("xxxx=xxxx", "="); //can pass custom delimiter as a second argument while creating an instance
-var {value, mask} = maskCreditCard("5987679500800000");
+var {value, mask} = maskCreditCard.mask("5987679500800000");
 
 // value | 5987679500800000
 // mask  | 5987=6795=0080=0000
