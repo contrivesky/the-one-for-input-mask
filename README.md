@@ -105,8 +105,3 @@ var {value, mask} = maskCreditCard.mask("5987679500800000");
 // value | 5987679500800000
 // mask  | 5987=6795=0080=0000
 ```
-
-## Comoing Soon
-
-* NPM package.
-* Test cases.
